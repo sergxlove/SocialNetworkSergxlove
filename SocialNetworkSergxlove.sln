@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkSergxlove", "SocialNetworkSergxlove\SocialNetworkSergxlove.csproj", "{66398766-D2E7-43BF-A9AB-039CC89C5E94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkSergxlove.Core", "SocialNetworkSergxlove.Core\SocialNetworkSergxlove.Core.csproj", "{43145166-9EC2-4123-9A9D-455B81599439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkSergxlove.Application", "SocialNetworkSergxlove.Application\SocialNetworkSergxlove.Application.csproj", "{7338C8A8-D08C-4C0D-B3A6-084E27980B7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkSergxlove.DataAccess.Postgres", "SocialNetworkSergxlove.DataAccess.Postgres\SocialNetworkSergxlove.DataAccess.Postgres.csproj", "{166EEB38-C8BD-4046-BA80-94F1F7789C52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialNetworkSergxlove.Infrastructure", "SocialNetworkSergxlove.Infrastructure\SocialNetworkSergxlove.Infrastructure.csproj", "{AD6D00D4-5F31-4A31-BDF7-2FB1D6C72F86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,22 @@ Global
 		{66398766-D2E7-43BF-A9AB-039CC89C5E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66398766-D2E7-43BF-A9AB-039CC89C5E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66398766-D2E7-43BF-A9AB-039CC89C5E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43145166-9EC2-4123-9A9D-455B81599439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43145166-9EC2-4123-9A9D-455B81599439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43145166-9EC2-4123-9A9D-455B81599439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43145166-9EC2-4123-9A9D-455B81599439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7338C8A8-D08C-4C0D-B3A6-084E27980B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7338C8A8-D08C-4C0D-B3A6-084E27980B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7338C8A8-D08C-4C0D-B3A6-084E27980B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7338C8A8-D08C-4C0D-B3A6-084E27980B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166EEB38-C8BD-4046-BA80-94F1F7789C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166EEB38-C8BD-4046-BA80-94F1F7789C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166EEB38-C8BD-4046-BA80-94F1F7789C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166EEB38-C8BD-4046-BA80-94F1F7789C52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD6D00D4-5F31-4A31-BDF7-2FB1D6C72F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6D00D4-5F31-4A31-BDF7-2FB1D6C72F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6D00D4-5F31-4A31-BDF7-2FB1D6C72F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6D00D4-5F31-4A31-BDF7-2FB1D6C72F86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
