@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Network | Все чаты</title>
+    <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Боковая панель -->
+        <div class="sidebar">
+            <div class="logo">SocialApp</div>
+
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <i class="fas fa-home"></i> Главная
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-user-friends"></i> Друзья
+                </div>
+                <div class="nav-item active">
+                    <i class="fas fa-comment-alt"></i> Сообщения
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-bell"></i> Уведомления
+                </div>
+                <div class="nav-item">
+                    <i class="fas fa-cog"></i> Настройки
+                </div>
+            </div>
+
+            <div class="user-profile">
+                <div class="user-avatar">ИИ</div>
+                <div class="user-info">
+                    <div class="user-name">Иван Иванов</div>
+                    <div class="user-status">online</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Основное содержимое -->
+        <div class="main-content">
+            <div class="header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Поиск чатов...">
+                </div>
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </div>
+                <div class="user-avatar small">ИИ</div>
+            </div>
+
+            <!-- Список чатов -->
+            <div class="chats-list">
+                <div class="chats-header">
+                    <div class="chats-title">Все чаты</div>
+                    <button class="new-chat-btn">
+                        <i class="fas fa-plus"></i> Новый чат
+                    </button>
+                </div>
+
+                <!-- Элемент чата -->
+                <div class="chat-item">
+                    <div class="chat-avatar">АП</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Анна Петрова</div>
+                        <div class="chat-preview">Привет! Как дела? Давно не виделись...</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">10:30</div>
+                        <div class="unread-count">2</div>
+                    </div>
+                </div>
+
+                <!-- Элемент чата -->
+                <div class="chat-item">
+                    <div class="chat-avatar">ПС</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Павел Сидоров</div>
+                        <div class="chat-preview">Готовы к завтрашней встрече?</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">Вчера</div>
+                        <div class="unread-count">1</div>
+                    </div>
+                </div>
+
+                <!-- Элемент чата -->
+                <div class="chat-item">
+                    <div class="chat-avatar">МК</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Мария Козлова</div>
+                        <div class="chat-preview">Отправила тебе файлы по проекту</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">Пн</div>
+                        <div class="unread-count" style="display: none;"></div>
+                    </div>
+                </div>
+
+                <!-- Элемент чата -->
+                <div class="chat-item">
+                    <div class="chat-avatar">РГ</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Рабочая группа</div>
+                        <div class="chat-preview">Алексей: Я закончил свою часть работы</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">12 апр</div>
+                        <div class="unread-count">5</div>
+                    </div>
+                </div>
+
+                <!-- Элемент чата -->
+                <div class="chat-item">
+                    <div class="chat-avatar">ДВ</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Дмитрий Васнецов</div>
+                        <div class="chat-preview">Спасибо за помощь!</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">5 апр</div>
+                        <div class="unread-count" style="display: none;"></div>
+                    </div>
+                </div>
+
+                <!-- Элемент чата -->
+                <div class="chat-item">
+                    <div class="chat-avatar">ОЛ</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Ольга Лебедева</div>
+                        <div class="chat-preview">Когда сможешь подойти?</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">3 апр</div>
+                        <div class="unread-count" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome для иконок -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
