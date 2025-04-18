@@ -33,6 +33,12 @@ namespace SocialNetworkSergxlove
                         {
                             context.Token = context.Request.Cookies["jwt"];
                             return Task.CompletedTask;
+                        },
+                        OnChallenge = context =>
+                        {
+                            context.HandleResponse();
+                            context.Response.Redirect("/login");
+                            return Task.CompletedTask;
                         }
                     };
                 });
