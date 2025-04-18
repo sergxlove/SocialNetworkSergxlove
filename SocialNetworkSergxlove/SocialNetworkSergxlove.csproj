@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SocialNetworkSergxlove.Application\SocialNetworkSergxlove.Application.csproj" />
+    <ProjectReference Include="..\SocialNetworkSergxlove.Core\SocialNetworkSergxlove.Core.csproj" />
+    <ProjectReference Include="..\SocialNetworkSergxlove.DataAccess.Postgres\SocialNetworkSergxlove.DataAccess.Postgres.csproj" />
     <ProjectReference Include="..\SocialNetworkSergxlove.Infrastructure\SocialNetworkSergxlove.Infrastructure.csproj" />
   </ItemGroup>
 

@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using SocialNetworkSergxlove.DataAccess.Postgres;
 using SocialNetworkSergxlove.Extensions;
 using SocialNetworkSergxlove.Infrastructure.Abstractions;
 using SocialNetworkSergxlove.Infrastructure.Jwt;
@@ -13,6 +15,10 @@ namespace SocialNetworkSergxlove
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<DbContextPostgres>(options =>
+            {
+                options.UseNpgsql("connectionstring");
+            });
             builder.Services.AddScoped<IJwtProvider, JwtProvider>();
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
