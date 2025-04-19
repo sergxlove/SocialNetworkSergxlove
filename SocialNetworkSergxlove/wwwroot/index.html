@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Network | Все чаты</title>
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <div class="container">
         <!-- Боковая панель -->
         <div class="sidebar">
             <div class="logo">SocialApp</div>
-
+            
             <div class="nav-menu">
                 <div class="nav-item">
                     <i class="fas fa-home"></i> Главная
@@ -30,6 +30,10 @@
                 </div>
             </div>
 
+            <div class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars">agragaa</i>
+            </div>
+            
             <div class="user-profile">
                 <div class="user-avatar">ИИ</div>
                 <div class="user-info">
@@ -38,7 +42,7 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- Основное содержимое -->
         <div class="main-content">
             <div class="header">
@@ -51,18 +55,18 @@
                 </div>
                 <div class="user-avatar small">ИИ</div>
             </div>
-
+            
             <!-- Список чатов -->
-            <div class="chats-list">
+            <div class="chats-list" id="chatsList">
                 <div class="chats-header">
                     <div class="chats-title">Все чаты</div>
                     <button class="new-chat-btn">
                         <i class="fas fa-plus"></i> Новый чат
                     </button>
                 </div>
-
+                
                 <!-- Элемент чата -->
-                <div class="chat-item">
+                <div class="chat-item" data-chat-id="1">
                     <div class="chat-avatar">АП</div>
                     <div class="chat-info">
                         <div class="chat-name">Анна Петрова</div>
@@ -73,9 +77,9 @@
                         <div class="unread-count">2</div>
                     </div>
                 </div>
-
+                
                 <!-- Элемент чата -->
-                <div class="chat-item">
+                <div class="chat-item" data-chat-id="2">
                     <div class="chat-avatar">ПС</div>
                     <div class="chat-info">
                         <div class="chat-name">Павел Сидоров</div>
@@ -86,9 +90,9 @@
                         <div class="unread-count">1</div>
                     </div>
                 </div>
-
+                
                 <!-- Элемент чата -->
-                <div class="chat-item">
+                <div class="chat-item" data-chat-id="3">
                     <div class="chat-avatar">МК</div>
                     <div class="chat-info">
                         <div class="chat-name">Мария Козлова</div>
@@ -99,9 +103,9 @@
                         <div class="unread-count" style="display: none;"></div>
                     </div>
                 </div>
-
+                
                 <!-- Элемент чата -->
-                <div class="chat-item">
+                <div class="chat-item" data-chat-id="4">
                     <div class="chat-avatar">РГ</div>
                     <div class="chat-info">
                         <div class="chat-name">Рабочая группа</div>
@@ -112,9 +116,9 @@
                         <div class="unread-count">5</div>
                     </div>
                 </div>
-
+                
                 <!-- Элемент чата -->
-                <div class="chat-item">
+                <div class="chat-item" data-chat-id="5">
                     <div class="chat-avatar">ДВ</div>
                     <div class="chat-info">
                         <div class="chat-name">Дмитрий Васнецов</div>
@@ -125,9 +129,9 @@
                         <div class="unread-count" style="display: none;"></div>
                     </div>
                 </div>
-
+                
                 <!-- Элемент чата -->
-                <div class="chat-item">
+                <div class="chat-item" data-chat-id="6">
                     <div class="chat-avatar">ОЛ</div>
                     <div class="chat-info">
                         <div class="chat-name">Ольга Лебедева</div>
@@ -139,11 +143,37 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Окно чата -->
+            <div class="chat-window" id="chatWindow">
+                <div class="chat-header">
+                    <div class="back-button" id="backButton">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <div class="chat-avatar" id="currentChatAvatar">АП</div>
+                    <div class="chat-info">
+                        <div class="chat-name" id="currentChatName">Анна Петрова</div>
+                        <div class="chat-preview" id="currentChatStatus">online</div>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Сообщения будут добавляться сюда динамически -->
+                </div>
+                
+                <div class="chat-input">
+                    <textarea placeholder="Напишите сообщение..." id="messageInput"></textarea>
+                    <button class="send-button" id="sendButton">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Font Awesome для иконок -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="scripts/index.js"></script>
+    
 </body>
 </html>
