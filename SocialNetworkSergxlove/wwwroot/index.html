@@ -7,42 +7,6 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Боковая панель -->
-        <div class="sidebar">
-            <div class="logo">SocialApp</div>
-            
-            <div class="nav-menu">
-                <div class="nav-item">
-                    <i class="fas fa-home"></i> Главная
-                </div>
-                <div class="nav-item">
-                    <i class="fas fa-user-friends"></i> Друзья
-                </div>
-                <div class="nav-item active">
-                    <i class="fas fa-comment-alt"></i> Сообщения
-                </div>
-                <div class="nav-item">
-                    <i class="fas fa-bell"></i> Уведомления
-                </div>
-                <div class="nav-item">
-                    <i class="fas fa-cog"></i> Настройки
-                </div>
-            </div>
-
-            <div class="sidebar-toggle" id="sidebarToggle">
-                <i class="fas fa-bars">agragaa</i>
-            </div>
-            
-            <div class="user-profile">
-                <div class="user-avatar">ИИ</div>
-                <div class="user-info">
-                    <div class="user-name">Иван Иванов</div>
-                    <div class="user-status">online</div>
-                </div>
-            </div>
-        </div>
-        
         <!-- Основное содержимое -->
         <div class="main-content">
             <div class="header">
@@ -142,6 +106,32 @@
                         <div class="unread-count" style="display: none;"></div>
                     </div>
                 </div>
+
+                <!-- Элемент чата -->
+                <div class="chat-item" data-chat-id="6">
+                    <div class="chat-avatar">ОЛ</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Ольга Лебедева</div>
+                        <div class="chat-preview">Когда сможешь подойти?</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">3 апр</div>
+                        <div class="unread-count" style="display: none;"></div>
+                    </div>
+                </div>
+
+                <!-- Элемент чата -->
+                <div class="chat-item" data-chat-id="6">
+                    <div class="chat-avatar">ОЛ</div>
+                    <div class="chat-info">
+                        <div class="chat-name">Ольга Лебедева</div>
+                        <div class="chat-preview">Когда сможешь подойти?</div>
+                    </div>
+                    <div class="chat-meta">
+                        <div class="chat-time">3 апр</div>
+                        <div class="unread-count" style="display: none;"></div>
+                    </div>
+                </div>
             </div>
             
             <!-- Окно чата -->
@@ -170,6 +160,15 @@
             </div>
         </div>
     </div>
+
+    <div class="message-container">
+        <div class="message-box">
+            <div class="message-text">Важное сообщение!</div>
+            <p>Этот контейнер занимает оставшиеся 50% страницы</p>
+        </div>
+    </div>
+
+    
 
     <!-- Font Awesome для иконок -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
