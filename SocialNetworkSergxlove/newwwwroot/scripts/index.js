@@ -1,5 +1,5 @@
- // Данные сообщений (в реальном приложении будут приходить с сервера)
- const messagesData = {
+// Данные сообщений (в реальном приложении будут приходить с сервера)
+const messagesData = {
     1: [
         { text: "Привет! Как дела?", sender: "Иван Петров", time: "10:30", incoming: true },
         { text: "Привет! Все отлично, спасибо!", sender: "Вы", time: "10:32", incoming: false },
@@ -132,4 +132,34 @@ document.getElementById('messageInput').addEventListener('keypress', function(e)
             }
         }
     }
+});
+
+// Поиск чатов
+document.querySelector('.search-bar input').addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    document.querySelectorAll('.chat-item').forEach(item => {
+        const chatName = item.querySelector('.chat-name').textContent.toLowerCase();
+        const chatPreview = item.querySelector('.chat-preview').textContent.toLowerCase();
+        
+        if (chatName.includes(searchTerm) || chatPreview.includes(searchTerm)) {
+            item.style.display = 'flex';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+});
+
+
+const menuToggle = document.getElementById('menuToggle');
+const profileMenu = document.getElementById('profileMenu');
+const menuOverlay = document.getElementById('menuOverlay');
+        
+menuToggle.addEventListener('click', function() {
+    profileMenu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+});
+        
+menuOverlay.addEventListener('click', function() {
+    profileMenu.classList.remove('active');
+    menuOverlay.classList.remove('active');
 });
