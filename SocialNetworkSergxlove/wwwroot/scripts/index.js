@@ -211,3 +211,19 @@ document.querySelector('.search-bar input').addEventListener('input', function(e
         }
     });
 });
+
+const menuToggle = document.getElementById('menuToggle');
+        const profileMenu = document.getElementById('profileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        
+        menuToggle.addEventListener('click', function() {
+            profileMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        });
+        
+        menuOverlay.addEventListener('click', function() {
+            profileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+        });
+
+        
