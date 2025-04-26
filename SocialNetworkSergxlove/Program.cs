@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using SocialNetworkSergxlove.DataAccess.Postgres;
+using SocialNetworkSergxlove.DataAccess.Postgres.Abstractions;
+using SocialNetworkSergxlove.DataAccess.Postgres.Repositories;
 using SocialNetworkSergxlove.Extensions;
 using SocialNetworkSergxlove.Infrastructure.Abstractions;
 using SocialNetworkSergxlove.Infrastructure.Jwt;
@@ -20,6 +22,7 @@ namespace SocialNetworkSergxlove
                 options.UseNpgsql("connectionstring");
             });
             builder.Services.AddScoped<IJwtProvider, JwtProvider>();
+            builder.Services.AddScoped<IUsersRepository, UsersRepository>();
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {

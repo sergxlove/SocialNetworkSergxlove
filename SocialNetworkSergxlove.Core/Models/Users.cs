@@ -1,4 +1,7 @@
-﻿namespace SocialNetworkSergxlove.Core.Models
+﻿using System.Security.Cryptography;
+using System.Text;
+
+namespace SocialNetworkSergxlove.Core.Models
 {
     public class Users
     {
@@ -22,7 +25,8 @@
             Password = password;
         }
 
-        public static (Users? user, string error) Create(string username, string password)
+        public static (Users? user, string error) Create(string username, string password,
+            Func<string, string> hashMethosd)
         {
             Users? user = null;
             string error = string.Empty;
@@ -43,8 +47,25 @@
                     $"до {MAX_LENGTH_PASSWORD} символов.";
             }
 
-            user = new Users(username, password);
+            user = new Users(username, hashMethosd(password));
             return (user, error);
+        }
+
+        public static (Users? user, string error) Create(string username, string password)
+        {
+            return Create(username, password, a =>
+            {
+                using (SHA256 sha256 = SHA256.Create())
+                {
+                    byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(a));
+                    StringBuilder builder = new StringBuilder();
+                    foreach (byte b in bytes)
+                    {
+                        builder.Append(b.ToString("x2"));
+                    }
+                    return builder.ToString();
+                }
+            });
         }
 
 
