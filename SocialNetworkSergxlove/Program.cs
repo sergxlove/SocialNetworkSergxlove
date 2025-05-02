@@ -23,6 +23,8 @@ namespace SocialNetworkSergxlove
             });
             builder.Services.AddScoped<IJwtProvider, JwtProvider>();
             builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -63,6 +65,8 @@ namespace SocialNetworkSergxlove
                 });
             });
             var app = builder.Build();
+            app.UseSwagger();
+            app.UseSwaggerUI();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseStaticFiles();
